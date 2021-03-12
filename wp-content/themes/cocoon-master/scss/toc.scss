@@ -1,0 +1,119 @@
+/************************************
+** 目次
+************************************/
+.toc{
+  border: 1px solid $basic_border_color;
+  font-size: 0.9em;
+  line-height: 1.5;
+  padding: 1em;
+  margin-bottom: 1em;
+  display: table;
+  //margin: 0 auto;
+
+  ul, ol{
+    padding-left: 20px;
+    margin-top: 0.5em;
+  }
+
+  ul{
+    list-style: none;
+    padding-left: 5px;
+  }
+
+  a{
+    color: $text_color;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.toc-center{
+  margin: 1em auto;
+}
+
+.toc-title{
+  font-size: 1.1em;
+  text-align: center;
+  display: block;
+  padding: 2px 16px;
+}
+
+.toc-widget-box{
+  .toc-title{
+    display: none;
+  }
+  .toc-content{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+.nwa .toc{
+  border: 0;
+  padding: 0 1em;
+}
+
+/************************************
+** h2-h6の見出し目次に連番を振る
+************************************/
+.toc.tnt-number-detail{
+  >ol{
+    padding-left: 0;
+  }
+  ol{
+    list-style: none;
+    li:before{
+      margin-right: 6px;
+    }
+  }
+
+  ol{
+    >li{
+      counter-increment: c-h2;
+      counter-reset: c-h3;
+    }
+
+    >li:before{
+      content: counter(c-h2)".";
+    }
+
+    >li > ol > li{
+      counter-increment: c-h3;
+      counter-reset: c-h4;
+    }
+
+    >li > ol > li:before{
+      content: counter(c-h2)"."counter(c-h3)".";
+    }
+
+    >li > ol > li > ol > li{
+      counter-increment: c-h4;
+      counter-reset: c-h5;
+    }
+
+    >li > ol > li > ol > li:before{
+      content: counter(c-h2)"."counter(c-h3)"."counter(c-h4)".";
+    }
+
+    >li > ol > li > ol > li > ol > li{
+      counter-increment: c-h5;
+      counter-reset: c-h6;
+    }
+
+    >li > ol > li > ol > li > ol > li:before{
+      content: counter(c-h2)"."counter(c-h3)"."counter(c-h4)"."counter(c-h5)".";
+    }
+
+    >li > ol > li > ol > li > ol > li > ol > li{
+      counter-increment: c-h6;
+    }
+
+    >li > ol > li > ol > li > ol > li > ol > li:before{
+      content: counter(c-h2)"."counter(c-h3)"."counter(c-h4)"."counter(c-h5)"."counter(c-h6)".";
+    }
+  }
+}

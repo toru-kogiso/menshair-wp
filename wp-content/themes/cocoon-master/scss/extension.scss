@@ -1,0 +1,1161 @@
+/*拡張クラスを追加するスタイルシート*/
+.badge,
+.ref,
+.reffer,
+.sankou{
+  color: $white;
+  background-color: #fc7a22;
+  padding: 1px 5px 0;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.badge-red{background-color: #d71d3b;}
+.badge-pink{background-color: #e91e63;}
+.badge-purple{background-color: #9c27b0;}
+.badge-blue{background-color: #2196f3;}
+.badge-green{background-color: #4caf50;}
+.badge-yellow{background-color: #edd60e;}
+.badge-brown{background-color: #795548;}
+.badge-grey{background-color: #9e9e9e;}
+
+/*太字*/
+.bold{
+  font-weight: bold;
+}
+
+/*赤色*/
+.red{
+  color: #E50202;
+}
+
+/*太字で赤色*/
+.bold-red{
+  font-weight:bold;
+  color: #E50202;
+}
+
+/*青色*/
+.blue{
+  color: blue;
+}
+
+/*太字で青色*/
+.bold-blue{
+  font-weight:bold;
+  color: blue;
+}
+
+/*緑色*/
+.green{
+  color: green;
+}
+
+/*太字で緑色*/
+.bold-green{
+  font-weight:bold;
+  color: green;
+}
+
+/*赤のアンダーライン*/
+.red-under{
+  border-bottom: 2px solid red;
+}
+
+$marker_yellow: #ff9;
+$marker_red: #ffd0d1;
+$marker_blue: #a5d7f9;
+
+/*マーカーの黄色のような色*/
+.marker{
+  background-color: $marker_yellow;
+}
+.marker-red{
+  background-color: $marker_red;
+}
+.marker-blue{
+  background-color: $marker_blue;
+}
+
+$marker_u_yellow: #ff6;
+$marker_u_red: #ffb6b9;
+$marker_u_blue: #a8dafb;
+
+/*下半分のマーカー色（km）*/
+.marker-under{
+  background: linear-gradient(transparent 60%, $marker_u_yellow 60%);
+}
+.marker-under-red{
+  background: linear-gradient(transparent 60%, $marker_u_red 60%);
+}
+.marker-under-blue{
+  background: linear-gradient(transparent 60%, $marker_u_blue 60%);
+}
+
+/*打ち消し線*/
+.strike{
+  text-decoration: line-through;
+}
+
+/*キーボードキーのスタイル*/
+.keyboard-key {
+  background-color: #f9f9f9;
+  background-image: -moz-linear-gradient(center top , #eee, #f9f9f9, #eee);
+  border: 1px solid $middle_thickness;
+  border-radius: 2px;
+  box-shadow: 1px 2px 2px #ddd;
+  font-family: inherit;
+  font-size: 0.85em;
+  padding: 1px 3px;
+}
+
+/*ブートストラップのインフォメーションライクな囲みが表示される*/
+.primary-box,
+.sp-primary,
+.primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*サクセスメッセージ*/
+.success-box,
+.sp-success,
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*インフォメッセージ*/
+.info-box,
+.sp-info,
+.info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*注意メッセージ*/
+.warning-box,
+.sp-warning,
+.warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*警告メッセージ*/
+.danger-box,
+.sp-danger,
+.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*セカンダリー*/
+.secondary-box {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*ライト*/
+.light-box {
+  color: #818182;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*ダーク*/
+.dark-box {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+  padding:15px;
+  border-radius:4px;
+  margin-bottom:20px;
+}
+
+/*******************************
+* 補足説明
+********************************/
+.information-box,
+.question-box,
+.alert-box,
+.information,
+.question,
+.alert,
+.memo-box,
+.comment-box,
+.common-icon-box{
+  //background-color: #F4F3EB;
+  padding: 20px 20px 20px 72px;
+  border-radius: 4px;
+  position: relative;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  //overflow: hidden;
+}
+
+.block-box{
+  p:first-child{
+    margin-top: 0;
+  }
+  p:last-child{
+    margin-bottom: 0;
+  }
+
+  ol,
+  ul{
+    margin: 0;
+  }
+}
+
+.information-box,
+.information{
+  background: #f3fafe;
+  border: 1px solid #bde4fc;
+}
+
+.question-box,
+.question{
+  background: #fff7cc;
+  border: 1px solid #ffe766;;
+}
+
+.alert-box,
+.alert{
+  background: #fdf2f2;
+  border: 1px solid #f6b9b9;
+}
+
+.memo-box{
+  background: #ebf8f4;
+  border: 1px solid #8dd7c1;
+}
+
+.comment-box{
+  background: #fefefe;
+  border: 1px solid #ccd;
+}
+
+.ok-box{
+  background: #f2fafb;
+  border: 1px solid #3cb2cc;
+}
+
+.ng-box{
+  background: #ffe7e7;
+  border: 1px solid #dd5454;
+}
+
+.good-box{
+  background: #f7fcf7;
+  border: 1px solid #98e093;
+}
+
+.bad-box{
+  background: #fff1f4;
+  border: 1px solid #eb6980;
+}
+
+.profile-box{
+  background: #fefefe;
+  border: 1px solid #ccd;
+}
+
+.information-box::before,
+.question-box::before,
+.alert-box::before,
+.information::before,
+.question::before,
+.alert::before,
+.memo-box::before,
+.comment-box::before,
+.common-icon-box::before{
+  font-family: "FontAwesome";
+  font-size: 50px;
+  position: absolute;
+  //top: 20px;
+  top: -13px;
+  left: 13px;
+  //color: #EAE3B4;
+  padding-right: .15em;
+  line-height: 1em;
+  top: 50%;
+  margin-top: -.5em;
+  width: 44px;
+  text-align: center;
+}
+
+.information-box::before,
+.information::before{
+  content: '\f05a';
+  color:#87cefa;
+  border-right: 1px solid #bde4fc;
+}
+
+.question-box::before,
+.question::before{
+  content: '\f059';
+  color: gold;
+  border-right: 1px solid #ffe766;
+}
+
+.alert-box::before,
+.alert::before{
+  content: '\f06a';
+  color: #f3aca9;
+  border-right: 1px solid #f6b9b9;
+}
+
+.memo-box::before{
+  content: '\f040';
+  color: #7ad0b6;
+  border-right: 1px solid #8dd7c1;
+  font-size: 36px;
+}
+
+.comment-box::before,
+.profile-box::before{
+  content: '\f0e5';
+  color: #999;
+  border-right: 1px solid #ccd;
+  font-size: 36px;
+}
+
+.profile-box::before{
+  content: '\f007';
+}
+
+.ok-box::before{
+  content: '\f10c';
+  color: #3cb2cc;
+  border-right: 1px solid #3cb2cc;
+  font-size: 36px;
+}
+
+.ng-box::before{
+  content: '\f00d';
+  color: #dd5454;
+  border-right: 1px solid #dd5454;
+  font-size: 36px;
+}
+
+.good-box::before{
+  content: '\f164';
+  color: #98e093;
+  border-right: 1px solid #98e093;
+  font-size: 36px;
+}
+
+.bad-box::before{
+  content: '\f165';
+  color: #eb6980;
+  border-right: 1px solid #eb6980;
+  font-size: 36px;
+}
+
+#wpadminbar .alert::before{
+  display: none;
+}
+
+@media screen and (max-width:440px){
+  .information-box,
+  .question-box,
+  .alert-box,
+  .information,
+  .question,
+  .alert,
+  .memo-box,
+  .comment-box,
+  .common-icon-box{
+    padding: 26px 6px 6px;
+  }
+
+  .information-box::before,
+  .question-box::before,
+  .alert-box::before,
+  .information::before,
+  .question::before,
+  .alert::before,
+  .memo-box::before,
+  .comment-box::before,
+  .common-icon-box::before{
+    padding: 0;
+    top: 0.7em;
+    left: 50%;
+    margin-left: -0.5em;
+    // top: 1em;
+    // left: 6px;
+    font-size: 18px;
+    border: none;
+    width: auto;
+  }
+
+  .container .blank-box{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+///////////////////////////////////////
+// 白抜きボックス
+///////////////////////////////////////
+$bb_gray: #999;
+$bb_yellow: #fc9f4d;
+$bb_red: #d05a6e;
+$bb_blue: #2ea9df;
+$bb_green: #3eb370;
+.blank-box{
+  border: 2px solid $bb_gray;
+  padding: 1.2em 1em;
+  margin: 1em 2%;
+
+  ol, ul{
+    margin: 0;
+  }
+
+  &.bb-yellow{border-color: $bb_yellow;}
+  &.bb-red{border-color: $bb_red;}
+  &.bb-blue{border-color: $bb_blue;}
+  &.bb-green{border-color: $bb_green;}
+
+  &.bb-tab{
+    position: relative;
+    margin-top: 2em;
+    &::before{
+      background-color: $bb_gray;
+      //font-family: FontAwesome, Aharoni, sans-serif;
+      font-family: FontAwesome, Aharoni, "Arial Black", Impact, Arial, sans-serif;
+      position: absolute;
+      font-size: .8em;
+      top: -1.8em;
+      left: -2px;
+      padding: 0 1em 0 .8em;
+      color: $white;
+      border-radius: 6px 6px 0 0;
+    }
+    &.bb-yellow::before{background-color: $bb_yellow;}
+    &.bb-red::before{background-color: $bb_red;}
+    &.bb-blue::before{background-color: $bb_blue;}
+    &.bb-green::before{background-color: $bb_green;}
+  }
+
+  &.sticky{
+    border-width: 0 0 0 6px;
+    border-color: $pallid_text_color;
+    background-color: $xx_thin;
+
+    &.st-yellow{
+      border-color: #FFA103;
+      background-color: #ffeac7;
+    }
+    &.st-red{
+      border-color: #CD3740;
+      background-color: #F5DADC;
+    }
+    &.st-blue{
+      border-color: #0066cc;
+      background-color: #E5F2FF;
+    }
+    &.st-green{
+      border-color: #028760;
+      background-color: #CBEFE4;
+    }
+  }
+}
+
+.bb-check::before{
+  content: "\f00c  CHECK";
+}
+
+.bb-comment::before{
+  content: "\f075  COMMENT";
+}
+
+.bb-point::before{
+  content: "\f0eb  POINT";
+}
+
+.bb-tips::before{
+  content: "\f19d  TIPS";
+}
+
+.bb-hint::before{
+  content: "\f0f3  HINT";
+}
+
+.bb-pickup::before{
+  content: "\f005  PICKUP";
+}
+
+.bb-bookmark::before{
+  content: "\f02e  BOOKMARK";
+}
+
+.bb-memo::before{
+  content: "\f040  MEMO";
+}
+
+.bb-download::before{
+  content: "\f019  DOWNLOAD";
+}
+
+.bb-break::before{
+  content: "\f0f4  BREAK";
+}
+
+.bb-amazon::before{
+  content: "\f270  AMAZON";
+}
+
+.bb-ok::before{
+  content: "\f10c  OK";
+}
+
+.bb-ng::before{
+  content: "\f00d  NG";
+}
+
+.bb-good::before{
+  content: "\f164  GOOD";
+}
+
+.bb-bad::before{
+  content: "\f165  BAD";
+}
+
+.bb-profile::before{
+  content: "\f007  PROFILE";
+}
+
+
+
+/*******************************
+* 続きはWEBで的な検索ボックス
+********************************/
+.search-form{
+  margin: 3em 0;
+}
+
+.search-form > div{
+  border: 1px solid #555;
+  border-radius: 2px;
+  padding: 5px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.search-form div.sform{
+  min-width: 280px;
+  background-color: $white;
+}
+
+.search-form div.sbtn{
+  background-color: #1155EE;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 30px;
+  position: absolute;
+}
+
+.search-form div.sbtn:before{
+  content: "\f002";
+  font-family: FontAwesome;
+  margin-right: 7px;
+}
+
+.search-form div.sbtn:after{
+  content: "\f25a";
+  font-family: FontAwesome;
+  color: #000;
+  position: absolute;
+  bottom: -1.4em;
+  font-size: 25px;
+}
+
+@media screen and (max-width:450px){
+  .search-form div{
+    padding: 3px 5px;
+    font-size: 75%;
+  }
+
+  .search-form div.sform{
+    min-width: 180px;
+  }
+
+  .search-form div.sbtn{
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+
+  .search-form div.sbtn:after{
+    font-size: 20px;
+    margin-left: -10px;
+  }
+}
+
+.btn-wrap{
+    min-height: 2em;
+  img[width="1"]{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.btn,
+.btn-wrap > a,
+.wp-block-freeform .btn-wrap > a{
+  color: $white;
+  font-weight: bold;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: normal;
+  padding: 10px 16px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid transparent;
+  position: relative;
+
+  amp-img{
+    position: absolute;
+  }
+
+  // a{
+  //   @include link_cancel;
+
+  //   color: #fff;
+  //   display: block;
+  //   height: 100%;
+  // }
+}
+
+.btn:before,
+.btn:after,
+.btn-wrap > a:before,
+.btn-wrap > a:after{
+  font-family: FontAwesome;
+  margin-right: 12px;
+}
+
+#container .btn:hover,
+#container .btn-wrap > a:hover{
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: $bgc_hover_anime;
+}
+
+.btn-m,
+.btn-wrap.btn-wrap-m > a{
+  padding: 14px 45px;
+  font-size: 16px;
+}
+
+.btn-l,
+.btn-wrap.btn-wrap-l > a{
+  padding: 20px 30px;
+  font-size: 18px;
+  //display: block;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  &::after{
+    content: "\f105";
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    // top: 50%;
+    // margin-top: -.5em;
+
+    //margin-top: -0.15em;
+  }
+}
+
+.btn-white, .btn-wrap.btn-wrap-white > a{color: #333;background-color: #fff;}
+#container .btn-white:hover, #container .btn-wrap.btn-wrap-white > a:hover{color: #333;}
+.btn-red, .btn-wrap.btn-wrap-red > a{background-color: #f44336;}
+.btn-pink, .btn-wrap.btn-wrap-pink > a{background-color: #e91e63;}
+.btn-purple, .btn-wrap.btn-wrap-purple > a{background-color: #9c27b0;}
+.btn-deep, .btn-wrap.btn-wrap-deep > a{background-color: #673ab7;}
+.btn-indigo, .btn-wrap.btn-wrap-indigo > a{background-color: #3f51b5;}
+.btn-blue, .btn-wrap.btn-wrap-blue > a{background-color: #2196f3;}
+.btn-light-blue, .btn-wrap.btn-wrap-light-blue > a{background-color: #03a9f4;}
+.btn-cyan, .btn-wrap.btn-wrap-cyan > a{background-color: #00bcd4;}
+.btn-teal, .btn-wrap.btn-wrap-teal > a{background-color: #009688;}
+.btn-green, .btn-wrap.btn-wrap-green > a{background-color: #4caf50;}
+.btn-light-green, .btn-wrap.btn-wrap-light-green > a{background-color: #8bc34a;}
+.btn-lime, .btn-wrap.btn-wrap-lime > a{background-color: #cddc39;}
+.btn-yellow, .btn-wrap.btn-wrap-yellow > a{background-color: #edd60e;}
+.btn-amber, .btn-wrap.btn-wrap-amber > a{background-color: #ffc107;}
+.btn-orange, .btn-wrap.btn-wrap-orange > a{background-color: #ff9800;}
+.btn-deep-orange, .btn-wrap.btn-wrap-deep-orange > a{background-color: #ff5722;}
+.btn-brown, .btn-wrap.btn-wrap-brown > a{background-color: #795548;}
+.btn-grey, .btn-wrap.btn-wrap-grey > a{background-color: #9e9e9e;}
+.btn-blue-grey, .btn-wrap.btn-wrap-blue-grey > a{background-color: #607d8b;}
+
+.btn-arrow-right:before, .btn-wrap.btn-wrap-arrow-right > a:before{content: "\f061";}
+.btn-chevron-right:before, .btn-wrap.btn-wrap-chevron-circle-right > a:before{content: "\f054";}
+.btn-angle-right:before, .btn-wrap.btn-wrap-angle-right > a:before{content: "\f105";}
+.btn-caret-right:before, .btn-wrap.btn-wrap-caret-right > a:before{content: "\f0da";}
+.btn-long-arrow-right:before, .btn-wrap.btn-wrap-long-arrow-right > a:before{content: "\f178";}
+.btn-chevron-circle-right:before, .btn-wrap.btn-wrap-chevron-circle-right > a:before{content: "\f138";}
+.btn-angle-double-right:before, .btn-wrap.btn-wrap-angle-double-right > a:before{content: "\f101";}
+.btn-arrow-circle-right:before, .btn-wrap.btn-wrap-arrow-circle-right > a:before{content: "\f0a9";}
+.btn-hand-o-right:before, .btn-wrap.btn-wrap-hand-o-right > a:before{content: "\f0a4";}
+.btn-arrow-circle-o-right:before, .btn-wrap.btn-wrap-arrow-circle-o-right > a:before{content: "\f18e";}
+.btn-caret-square-o-right:before, .btn-wrap.btn-wrap-caret-square-o-right > a:before{content: "\f152";}
+
+.micro-copy{
+  &.alignleft{
+    float: none;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  &.alignright{
+    float: none;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  &.aligncenter{
+    text-align: center;
+  }
+}
+
+.micro-top{
+  font-size: 0.8em;
+  margin-bottom: -1.2em;
+  margin-top: 1em;
+}
+.micro-bottom{
+  font-size: 0.8em;
+  margin-top: -1.2em;
+  margin-bottom: 1em;
+}
+.micro-center{
+  text-align: center;
+}
+.micro-right{
+  text-align: right;
+}
+
+
+.micro-balloon {
+	position: relative;
+	background: $white;
+  border: 1px solid $x_pallid_text_color;
+  border-radius: 4px;
+  padding: 3px 8px;
+  display: table;
+  //margin-bottom: -.7em;
+  font-size: 0.8em;
+}
+.micro-balloon:after, .micro-balloon:before {
+  top: calc(100% - 1px);
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.micro-balloon:after {
+	border-top-color: $white;
+	border-width: 7px;
+	margin-left: -7px;
+}
+.micro-balloon:before {
+	border-top-color: $x_pallid_text_color;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+.micro-balloon-center{
+  margin-left: auto;
+  margin-right: auto;
+}
+.micro-balloon-right{
+  margin-left: auto;
+}
+.micro-bottom.micro-balloon{
+  margin-top: -.5em;
+}
+.micro-bottom.micro-balloon:after, .micro-bottom.micro-balloon:before {
+  bottom: calc(100% - 1px);
+  top: auto;
+}
+
+.micro-bottom.micro-balloon:after {
+	border-bottom-color: $white;
+  border-top-color: transparent;
+}
+.micro-bottom.micro-balloon:before {
+  border-bottom-color: $x_pallid_text_color;
+  border-top-color: transparent;
+}
+
+.micro-copy.alignleft,
+.micro-copy.alignright{
+  float: none;
+}
+.micro-copy.alignright{
+  margin-left: auto;
+}
+
+///////////////////////////////////////////
+// Cocoon Blocks共通オプション
+///////////////////////////////////////////
+.mc-circle{
+  border-radius: 2em;
+}
+@mixin micro_copycolor($color: 'red'){
+  background-color: $color;
+  color:$white;
+  border: none;
+  &.micro-bottom{
+    &::after{
+      border-bottom-color: $color;
+      border-top-color: transparent;
+    }
+  }
+  &::before{
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+  &::after{
+    border-top-color: $color;
+  }
+}
+.micro-balloon{
+  &.mc-yellow{
+    @include micro_copycolor($bb_yellow);
+  }
+  &.mc-red{
+    @include micro_copycolor($bb_red);
+  }
+  &.mc-blue{
+    @include micro_copycolor($bb_blue);
+  }
+  &.mc-green{
+    @include micro_copycolor($bb_green);
+  }
+}
+
+
+// /*メインカランの2カラム化*/
+// .half-half{
+// }
+// .half-l,
+// .half-r{
+//   margin: 1em 0;
+// }
+// .half-l{
+//   float: left;
+//   width: 50%;
+//   padding-right: 10px;
+//   box-sizing: border-box;
+// }
+
+// .half-r{
+//   float: right;
+//   width: 50%;
+//   padding-left: 10px;
+//   box-sizing: border-box;
+// }
+
+// @media screen and (max-width:639px){
+//   .half-l,
+//   .half-r{
+//     float: none;
+//     width: auto;
+//     padding: 0;
+//   }
+// }
+
+.blogcard-type .blogcard::before{
+  font-family: FontAwesome;
+  position: absolute;
+  top: -1.1em;
+  left: 2%;
+  font-size: 0.7em;
+  padding: 2px 0.6em 3px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 2px;
+  white-space: pre;
+  letter-spacing: 0.06em;
+}
+.bct-related .blogcard::before{
+  content: $bct-related;
+}
+.bct-reference .blogcard::before{
+  content: $bct-reference;
+}
+.bct-popular .blogcard::before{
+  content: $bct-popular;
+}
+.bct-pickup .blogcard::before{
+  content: $bct-pickup;
+}
+.bct-check .blogcard::before{
+  content: $bct-check;
+}
+.bct-together .blogcard::before{
+  content: $bct-together;
+}
+.bct-detail .blogcard::before{
+  content: $bct-detail;
+}
+.bct-official .blogcard::before{
+  content:$bct-official;
+}
+
+///////////////////////////////////////////
+// ボタンブロック
+///////////////////////////////////////////
+.button-block{
+  float: none;
+  margin: 1em 0;
+  &.alignleft{
+    text-align: left;
+  }
+  &.aligncenter{
+    text-align: center;
+  }
+  &.alignright{
+    text-align: right;
+  }
+}
+
+/************************************
+** 汎用ボックス共通
+************************************/
+.block-box-label{
+  display: flex;
+  &::before{
+    margin-right: 0.3em;
+  }
+}
+
+/************************************
+** キャプションボックス
+************************************/
+.caption-box{
+  margin: 1.2em 0;
+  border: 2px solid $current_bgc;
+  border-radius: $basic_border_radius;
+}
+
+.caption-box-label{
+  padding: 0.2em 0.8em;
+  background-color: $current_bgc;
+}
+.caption-box-content{
+  padding: 0.4em 0.8em;
+}
+
+@mixin caption_color($color: $bb_yellow) {
+  &.caption-box{
+    border-color: $color;
+  }
+  .caption-box-label{
+    background-color: $color;
+    color: $white;
+  }
+}
+.cb-yellow{@include caption_color($bb_yellow);}
+.cb-red{@include caption_color($bb_red);}
+.cb-blue{@include caption_color($bb_blue);}
+.cb-green{@include caption_color($bb_green);}
+
+/************************************
+** キャプションタブボックス
+************************************/
+.tab-caption-box{
+  margin: 1.2em 0;
+}
+.tab-caption-box-label{
+  padding: 0 0.8em;
+  font-size: 0.9em;
+  background-color: $current_bgc;
+  display: inline-block;
+  border-top-left-radius: $middle_border_radius;
+  border-top-right-radius: $middle_border_radius;
+}
+.tab-caption-box-content{
+  margin-top: -3px;
+  border: 3px solid $current_bgc;
+  padding: 0.4em 0.8em;
+  border-radius: $middle_border_radius;
+  border-top-left-radius: 0;
+}
+@mixin caption_tab_color($color: $bb_yellow) {
+  .tab-caption-box-label{
+    background-color: $color;
+    color: $white;
+  }
+  .tab-caption-box-content{
+    border-color: $color;
+  }
+}
+.tcb-yellow{@include caption_tab_color($bb_yellow);}
+.tcb-red{@include caption_tab_color($bb_red);}
+.tcb-blue{@include caption_tab_color($bb_blue);}
+.tcb-green{@include caption_tab_color($bb_green);}
+
+/************************************
+** ラベルボックス
+************************************/
+.label-box{
+  margin: 1.2em 0;
+}
+.label-box-label{
+  margin-left: 2em;
+  padding: 0 0.8em;
+  font-size: 0.9em;
+  background-color: $white;
+  display: inline-block;
+  // border: 2px solid $middle_thickness;
+  // border-radius: $middle_border_radius;
+}
+.label-box-content{
+  margin-top: -0.9em;
+  border: 3px solid $middle_thickness;
+  padding: 1em 0.8em 0.4em;
+  border-radius: $middle_border_radius;
+}
+@mixin label_color($color: $bb_yellow) {
+  .label-box-content{
+    border-color: $color;
+  }
+}
+.lb-yellow{@include label_color($bb_yellow);}
+.lb-red{@include label_color($bb_red);}
+.lb-blue{@include label_color($bb_blue);}
+.lb-green{@include label_color($bb_green);}
+
+
+/************************************
+** トグル表示ボタン
+************************************/
+.toggle-wrap {
+  margin: 1.2em 0;
+  position: relative;
+  >p{
+    margin: 0;
+  }
+  .toggle-content {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    padding: 0 1em;
+    height: 0;
+    transition: $bgc_hover_anime;
+    overflow: hidden;
+  }
+}
+
+.toggle-button {
+  display: block;
+  cursor: pointer;
+  padding: 3px 10px;
+  background-color: $xx_thin;
+  border: 1px solid $basic_border_color;
+  text-align: center;
+  border-radius: $basic_border_radius;
+  position: relative;
+  margin: 0;
+
+  &::before{
+    content: '\f067';
+    font-family: FontAwesome;
+    margin-right: 0.4em;
+    font-size: 0.8em;
+    color: $x_pallid_text_color;
+  }
+
+
+}
+
+.toggle-button:hover {
+  opacity: 0.7;
+}
+
+.toggle-checkbox{
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .toggle-button{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  &::before{
+    content: '\f068';
+  }
+}
+
+.toggle-checkbox:checked ~ .toggle-content {
+  //display: block;
+  visibility: visible;
+  opacity: 1;
+  height: 100%;
+  transition: $bgc_hover_anime;
+  padding: 1em;
+  border: 1px solid $basic_border_color;
+  border-top-width: 0;
+  border-bottom-left-radius: $basic_border_radius;
+  border-bottom-right-radius: $basic_border_radius;
+}
+
+@mixin toggle_color($color: $bb_yellow) {
+  .toggle-button{
+    border: 1px solid $color;
+    background: $color;
+    color: $white;
+    &::before{
+      color: $thin;
+    }
+  }
+  .toggle-checkbox:checked ~ .toggle-content{
+    border-color: $color;
+  }
+}
+
+.tb-yellow{@include toggle_color($bb_yellow);}
+.tb-red{@include toggle_color($bb_red);}
+.tb-blue{@include toggle_color($bb_blue);}
+.tb-green{@include toggle_color($bb_green);}

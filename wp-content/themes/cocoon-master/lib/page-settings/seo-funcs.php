@@ -1,0 +1,130 @@
+<?php //SEO設定に必要な定数や関数
+/**
+ * Cocoon WordPress Theme
+ * @author: yhira
+ * @link: https://wp-cocoon.com/
+ * @license: http://www.gnu.org/licenses/gpl-2.0.html GPL v2 or later
+ */
+if ( !defined( 'ABSPATH' ) ) exit;
+
+//canonicalタグの追加
+define('OP_CANONICAL_TAG_ENABLE', 'canonical_tag_enable');
+if ( !function_exists( 'is_canonical_tag_enable' ) ):
+function is_canonical_tag_enable(){
+  return get_theme_option(OP_CANONICAL_TAG_ENABLE, 1);
+}
+endif;
+
+//分割ページにrel="next"/"prev"タグの追加
+define('OP_PREV_NEXT_ENABLE', 'prev_next_enable');
+if ( !function_exists( 'is_prev_next_enable' ) ):
+function is_prev_next_enable(){
+  return get_theme_option(OP_PREV_NEXT_ENABLE, 1);
+}
+endif;
+
+//カテゴリページの2ページ目以降をnoindexとする
+define('OP_PAGED_CATEGORY_PAGE_NOINDEX', 'paged_category_page_noindex');
+if ( !function_exists( 'is_paged_category_page_noindex' ) ):
+function is_paged_category_page_noindex(){
+  return get_theme_option(OP_PAGED_CATEGORY_PAGE_NOINDEX);
+}
+endif;
+
+//タグページをnoindexとする
+define('OP_TAG_PAGE_NOINDEX', 'tag_page_noindex');
+if ( !function_exists( 'is_tag_page_noindex' ) ):
+function is_tag_page_noindex(){
+  return get_theme_option(OP_TAG_PAGE_NOINDEX, 1);
+}
+endif;
+
+//その他のアーカイブページをnoindexとする
+define('OP_OTHER_ARCHIVE_PAGE_NOINDEX', 'other_archive_page_noindex');
+if ( !function_exists( 'is_other_archive_page_noindex' ) ):
+function is_other_archive_page_noindex(){
+  return get_theme_option(OP_OTHER_ARCHIVE_PAGE_NOINDEX, 1);
+}
+endif;
+
+//添付ファイルページをnoindexとする
+define('OP_ATTACHMENT_PAGE_NOINDEX', 'attachment_page_noindex');
+if ( !function_exists( 'is_attachment_page_noindex' ) ):
+function is_attachment_page_noindex(){
+  return get_theme_option(OP_ATTACHMENT_PAGE_NOINDEX, 1);
+}
+endif;
+
+//検索エンジンに知らせる日付
+define('OP_SEO_DATE_TYPE', 'seo_date_type');
+if ( !function_exists( 'get_seo_date_type' ) ):
+function get_seo_date_type(){
+  return get_theme_option(OP_SEO_DATE_TYPE, 'both_date');
+}
+endif;
+if ( !function_exists( 'is_seo_date_type_both_date' ) ):
+function is_seo_date_type_both_date(){
+  return get_seo_date_type() == 'both_date';
+}
+endif;
+if ( !function_exists( 'is_seo_date_type_post_date_only' ) ):
+function is_seo_date_type_post_date_only(){
+  return get_seo_date_type() == 'post_date_only';
+}
+endif;
+if ( !function_exists( 'is_seo_date_type_update_date_only' ) ):
+function is_seo_date_type_update_date_only(){
+  return get_seo_date_type() == 'update_date_only';
+}
+endif;
+if ( !function_exists( 'is_seo_date_type_none' ) ):
+function is_seo_date_type_none(){
+  return get_seo_date_type() == 'none';
+}
+endif;
+//投稿日・更新日タグを取得する
+if ( !function_exists( 'get_the_date_tags' ) ):
+function get_the_date_tags(){
+  $update_time = get_update_time();
+  $published = is_seo_date_type_update_date_only() ? ' published' : null;
+  $date_published = is_seo_date_type_update_date_only() ? 'datePublished ' : null;
+  //更新日が存在するときは、投稿日にupdatedクラスを出力しない
+  $updated = !$update_time || is_seo_date_type_post_date_only() ? ' updated' : null;
+  $date_modified = !$update_time || is_seo_date_type_post_date_only() ? ' dateModified' : null;
+  $display_none = is_seo_date_type_none() ? ' display-none' : null;
+  //timeタグがある投稿日
+  $time_post_date_tag = '<span class="post-date'.$display_none.'"><time class="entry-date date published'.$updated.'" datetime="'.get_the_time('c').'" itemprop="datePublished'.$date_modified.'">'.get_the_time(get_site_date_format()).'</time></span>';
+  // //通常の投稿日
+  // $post_date_tag = '<span class="post-date"><time class="entry-date date published" datetime="'.get_the_time('c').' itemprop="datePublished">'.get_the_time(get_site_date_format()).'</time></span>';
+  //timeタグがある更新日
+  $time_update_date_tag = '<span class="post-update'.$display_none.'"><time class="entry-date date'.$published.' updated" datetime="'.get_update_time('c').'" itemprop="'.$date_published.'dateModified">'.get_update_time(get_site_date_format()).'</time></span>';
+  // //通常の更新日
+  // $update_date_tag = '<span class="post-update"><time class="entry-date date updated" datetime="'.get_update_time('c').'" itemprop="dateModified">'.get_update_time(get_site_date_format()).'</time></span>';
+  switch (get_seo_date_type()) {
+    //投稿日のみを伝える
+    case 'post_date_only':
+      $date_tags = $time_post_date_tag;
+      break;
+    //更新日のみを伝える
+    case 'update_date_only':
+      //更新日がある場合
+      if ($update_time) {
+        $date_tags = $time_update_date_tag;
+      } else {
+        $date_tags = $time_post_date_tag;
+      }
+      break;
+    //更新日・投稿日を伝える
+    default:
+      $date_tags = $time_post_date_tag;
+      //更新日があるとき
+      if ($update_time) {
+        $date_tags .= $time_update_date_tag;
+      }
+      break;
+
+      break;
+  }
+  return $date_tags;
+}
+endif;

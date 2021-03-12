@@ -1,0 +1,32 @@
+
+
+/*検索フォーム*/
+.search-box{
+  margin: 1em 0 2em;
+  position: relative;
+}
+
+.search-edit{
+  font-family: $meiryo_font;
+  @extend %form_common;
+  //border-radius: $basic_border_radius;
+}
+
+.search-submit{
+  position: absolute;
+  right: 0;
+  top: 2px;
+  // top: 50%;
+  // margin-top: -0.65em;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 49px;
+  border: none;
+  color: $thin;
+  padding: 0 8px;
+  background-color: rgba(255, 255, 255, 0);
+
+  &::before{
+    @include fontawesome('\f002');
+  }
+}

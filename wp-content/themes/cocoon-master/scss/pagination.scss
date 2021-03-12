@@ -1,0 +1,108 @@
+//ページネーションやページャー用
+@mixin pagination_wrap {
+  margin: 24px 0;
+  clear: both;
+  text-align: center;
+}
+//ページネーションボタン
+$pagination_wh: 50px;
+@mixin pagination_button {
+  @include link_cancel;
+  display: inline-block;
+  height: $pagination_wh;
+  width: $pagination_wh;
+  border: 1px solid $thin;
+  margin: 0 4px;
+  line-height: $pagination_wh;
+  text-align: center;
+}
+
+/************************************
+** ページネーション
+************************************/
+.pagination{
+  @include pagination_wrap;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+
+  .current{
+    background-color: $current_bgc;
+  }
+
+  .prev::before{
+    @include fontawesome('\f104');
+    padding-right: 3px;
+  }
+
+  .next::before{
+    @include fontawesome('\f105');
+    padding-left: 3px;
+  }
+
+
+  a{
+    &:hover {
+      @include bgc_hover;
+    }
+  }
+}
+
+.page-numbers{
+  @include pagination_button;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.page-numbers.dots {
+  opacity: 0.6;
+  background-color: $xx_thin;
+}
+
+/************************************
+** 「次のページ」ページネーション
+************************************/
+.pagination-next-link {
+  background-color: #f9f9f9;
+  border: 1px solid $thin;
+  color: $text_color;
+  display: block;
+  font-size: 1.25em;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  display: block;
+
+  &:hover {
+    @include bgc_hover;
+  }
+}
+
+/************************************
+** マルチページのページャーリンク
+************************************/
+.pager-links{
+  @include pagination_wrap;
+
+  span{
+    background-color: $current_bgc;
+  }
+
+  a{
+    display: inline-block;
+
+    span{
+      background-color: $white;
+    }
+
+    &:hover span {
+      @include bgc_hover;
+    }
+  }
+
+  // span{
+  //   @include pagination_button;
+  // }
+
+}

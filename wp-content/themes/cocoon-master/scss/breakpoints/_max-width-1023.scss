@@ -1,0 +1,100 @@
+.navi-footer{
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+.copyright{
+  width: 100%;
+}
+
+.navi-footer-in > ul{
+  justify-content: center;
+  padding: 1em;
+}
+
+.footer-widgets{
+  display: block;
+  // flex-direction: column;
+  >div{
+    width: 100%;
+  }
+}
+
+.content-in{
+  display: block;
+  //flex-direction: column;
+}
+
+main.main,
+div.sidebar{
+  display: block;
+  margin: 10px;
+  width: auto;
+}
+
+.footer-bottom-logo,
+.footer-bottom-content{
+  float: none;
+}
+
+.footer-bottom-logo{
+  line-height: 1;
+  // .logo-image{
+  //   // .site-name{
+  //   //   font-size: 1em;
+  //   // }
+  // }
+}
+
+.footer-bottom-content{
+  text-align: center;
+}
+
+.fb-like-message{
+  font-size: 0.8em;
+  line-height: 1.4;
+}
+
+.sidebar-scroll{
+  position: static;
+}
+
+
+//ヘッダーなどの背景画像
+.ba-fixed.header, .ba-fixed.appeal{
+  background-attachment: scroll;
+}
+
+.header, .appeal{
+  background-size: cover;
+}
+
+.footer-bottom-logo{
+  position: relative;
+  bottom: auto;
+}
+.logo-footer{
+  margin: 8px auto;
+}
+
+
+.mobile-menu-buttons{
+  display: flex;
+}
+
+.mobile-button-slide-in .go-to-top-button{
+  display: none;
+}
+
+.mblt-slide-in .footer{
+  margin-bottom: 50px;
+}
+
+.navi-footer-in > .menu-footer{
+  justify-content: center;
+}
+
+.footer-bottom.fdt-left-and-right .footer-bottom-content{
+  flex-direction: column;
+}

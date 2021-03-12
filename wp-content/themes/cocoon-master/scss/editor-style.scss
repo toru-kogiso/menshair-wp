@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+//固定値
+@import "defins";
+
+/*ビジュアルエディターのスタイルを書く*/
+body#tinymce {
+  padding: 0 20px !important;
+  margin-top: 0 !important;
+  background-image: none;
+  background-color: #fff;
+}
+
+.column-2,
+.column-3{
+  margin: 16px 0;
+}
+
+/* .column-2::before,
+.column-3::before{
+  content: "※カラムへの着色はエディタのみ";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1em;
+  width: 31%;
+  font-size: 0.8em;
+  padding: 4px 8px;
+  background-color: #f7dde4;
+  text-align: center;
+}
+
+html[lang="en"] .column-2::before,
+html[lang="en"] .column-3::before{
+  content: "* Coloring is Editor Only.";
+} */
+
+.column-left{
+  background-color: #c7e1ef;
+}
+
+.column-center{
+  background-color: #c9e8d8;
+}
+
+.column-right{
+  background-color: #ffecd3;
+}
+
+.btn-wrap,
+.blogcard-type{
+  padding: 6px;
+  margin: 4px 0;
+  position: relative;
+}
+
+span.btn-wrap{
+  padding: 6px 18px 6px;
+  display: inline-block;
+  font-size: 0.8em;
+}
+
+.btn-wrap::before{
+  position: absolute;
+  top: -2px;
+  right: 4px;
+}
+
+.btn-wrap::before{
+  font-family: FontAwesome;
+  color: #DBB004;
+  content: '\f146';
+}
+
+.blogcard-type::before{
+  font-family: FontAwesome;
+  font-size: 0.6em;
+  padding: 0 4px;
+  background-color: #587b93;
+  color: #fff;
+  top: 0;
+  right: 0;
+  position: absolute;
+  white-space: pre;
+}
+
+.btn-wrap{
+  background-color: #f8e58c;
+}
+
+.blogcard-type{
+  padding-top: 1em;
+  background-color: #e6ecf0;
+}
+
+.blogcard-type.bct-none::before{
+  content: $bct-none;
+}
+
+.blogcard-type.bct-related::before{
+  content: $bct-related;
+}
+
+.blogcard-type.bct-reference::before{
+  content: $bct-reference;
+}
+
+.blogcard-type.bct-popular::before{
+  content: $bct-popular;
+}
+
+.blogcard-type.bct-pickup::before{
+  content: $bct-pickup;
+}
+
+.blogcard-type.bct-check::before{
+  content: $bct-check;
+}
+
+.blogcard-type.bct-together::before{
+  content: $bct-together;
+}
+
+.blogcard-type.bct-detail::before{
+  content: $bct-detail;
+}
+
+.blogcard-type.bct-official::before{
+  content: $bct-official;
+}
+
+/*ビジュアルエディターにinstagramの引用符が表示される対応*/
+.instagram-media {
+  position: relative !important;
+}
+
+// /*Gutenbergの引用スタイルを打ち消す*/
+// .wp-block-freeform.core-blocks-rich-text__tinymce blockquote{
+//   border: 1px solid #ccc;
+// }
+
+// /*Gutenbergのテーマ用ドロップダウンリストを1列に収める*/
+// .mce-listbox button {
+//   max-width: 98px;
+// }
+// /* Main column width */
+
+// body.gutenberg-editor-page .editor-block-list__layout{
+//   padding: 0;
+// }
+
+// @media screen and (min-width: 960px){
+//   div.edit-post-text-editor {
+//     // padding-left: 10%;
+//     // padding-right: 10%;
+//     max-width: 800px;
+//   }
+// }
+
+//wpForoの入力フォームをiPhoneでみた場合横揺れする場合の対処
+.postbody.main{
+  width: auto;
+}
+
+.button-wrap-msg,
+.box-block-msg{
+  font-size: 10px;
+  text-align: center;
+}
+
+// .btn-wrap > a{
+//   pointer-events: none;
+// }

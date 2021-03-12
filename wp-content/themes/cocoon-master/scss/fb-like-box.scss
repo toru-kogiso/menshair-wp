@@ -1,0 +1,98 @@
+.fb-like-box{
+  background-color: #444;
+  color: $white;
+  display: flex;
+  flex-wrap: nowrap;
+  .fb-like-thumb,
+  .fb-like-content{
+    width: 100%;
+    >*{
+      min-width: 100%;
+    }
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .fb_reset{
+    display: none;
+  }
+
+
+}
+
+.fb-like-thumb{
+  max-width: 56%;
+}
+
+.fb-like-content{
+//  width: 44%;
+  //display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  text-align: center;
+
+  >div{
+    //height: 100%;
+    padding-top: 8px;
+    //margin-top: 8px;
+    //margin: 10px;
+  }
+}
+
+.fb-like-message{
+  color: #eee;
+  font-size: 0.9em;
+}
+
+.fb-like-sub-message{
+  color: #ccc;
+  font-size: 0.7em;
+  margin-bottom: 8px;
+}
+
+.fb-like-buttons{
+  padding: 0;
+  text-align: center;
+  // >div{
+  //   line-height: 32px;
+  // }
+  >div{
+    margin: 8px;
+    // position: relative;
+
+    // >iframe{
+    //   line-height: 32px;
+    // }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >*{
+      height: 100%;
+    }
+  }
+
+}
+
+.fb-like-facebook{
+  margin-bottom: -7px;
+}
+
+// .line-it-button{
+//   display: none;
+// }
+
+///////////////////////////////////////
+// サイドバーのFacebookボックス
+///////////////////////////////////////
+.sidebar{
+  @include fb_like_box;
+}

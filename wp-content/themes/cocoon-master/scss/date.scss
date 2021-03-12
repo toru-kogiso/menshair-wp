@@ -1,0 +1,42 @@
+/************************************
+** 日付関係のスタイル
+************************************/
+.date-tags{
+  line-height: 0.8;
+  // margin-top: -8px;
+  text-align: right;
+  span:last-child{
+    margin-right: 0;
+  }
+  margin-bottom: 1em;
+  // text-align: right;
+  // position: absolute;
+  // right: 0;
+  // top: 0;
+}
+
+.post-date,
+.post-update,
+.post-author,
+.amp-back {
+  //@extend .entry-category;
+  @extend %entry_category;
+  margin-right: 8px;
+}
+
+.related-entry-post-date{
+  margin-right: 0;
+}
+
+.post-date::before{
+  @include fontawesome('\f017');
+}
+
+.post-update::before{
+  @include fontawesome('\f1da');
+}
+
+.amp-back::before{
+  @include fontawesome('\f0e7');
+  padding-right: 0;
+}
